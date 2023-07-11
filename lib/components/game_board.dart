@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter2048/components/game_bricks.dart';
-import 'package:flutter2048/helpers/board_mixin.dart';
-import 'package:flutter2048/providers/game.dart';
+import 'package:game2048/components/game_bricks.dart';
+import 'package:game2048/helpers/board_mixin.dart';
+import 'package:game2048/providers/game.dart';
 import 'package:provider/provider.dart';
 
 const double cellsRadius = 10;
@@ -11,8 +11,8 @@ class GameBoard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: const [
+    return const Stack(
+      children: [
         BoardGrid(),
         GameBricks(),
       ],

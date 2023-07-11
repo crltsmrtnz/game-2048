@@ -1,10 +1,8 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
-import 'package:flutter2048/components/brick_widget.dart';
-import 'package:flutter2048/helpers/board_mixin.dart';
-import 'package:flutter2048/providers/game.dart';
-import 'package:flutter2048/types/brick_move.dart';
+import 'package:game2048/components/brick_widget.dart';
+import 'package:game2048/helpers/board_mixin.dart';
+import 'package:game2048/providers/game.dart';
+import 'package:game2048/types/brick_move.dart';
 import 'package:provider/provider.dart';
 
 class MovingBrick extends StatelessWidget {

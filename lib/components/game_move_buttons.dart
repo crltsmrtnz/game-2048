@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter2048/types/directions.dart';
-import 'package:flutter2048/providers/game.dart';
+import 'package:game2048/types/directions.dart';
+import 'package:game2048/providers/game.dart';
 import 'package:provider/provider.dart';
 
 class GameMoveButtons extends StatelessWidget {

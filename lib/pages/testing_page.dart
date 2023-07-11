@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter2048/components/swipe_detector.dart';
 
 class TestingPage extends StatefulWidget {
   const TestingPage({super.key});

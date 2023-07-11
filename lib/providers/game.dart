@@ -1,11 +1,10 @@
-import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/widgets.dart';
-import 'package:flutter2048/types/brick.dart';
-import 'package:flutter2048/types/brick_move.dart';
-import 'package:flutter2048/types/directions.dart';
-import 'package:flutter2048/types/position.dart';
+import 'package:game2048/types/brick.dart';
+import 'package:game2048/types/brick_move.dart';
+import 'package:game2048/types/directions.dart';
+import 'package:game2048/types/position.dart';
 
 const Duration movingDelay = Duration(milliseconds: 300);
 
@@ -72,12 +71,15 @@ class Game extends ChangeNotifier {
       x = random.nextInt(boardWidth);
       y = random.nextInt(boardHeight);
     } while (getCellValue(x: x, y: y) != 0);
-    int value = maxExponent != minExponent ? (minExponent + random.nextInt(maxExponent - minExponent)) : minExponent;
+    int value = maxExponent != minExponent
+        ? (minExponent + random.nextInt(maxExponent - minExponent))
+        : minExponent;
     boardData[y][x] = pow(2, value).toInt();
     ++filledNumbers;
   }
 
-  List<List<int>> getUnrotatedBoard(List<List<int>> board, Directions direction) {
+  List<List<int>> getUnrotatedBoard(
+      List<List<int>> board, Directions direction) {
     Directions unrotateDirection = Directions.left;
     switch (direction) {
       case Directions.up:
@@ -101,7 +103,8 @@ class Game extends ChangeNotifier {
       case Directions.down:
         return Position(x: origin.y, y: boardWidth - 1 - origin.x);
       case Directions.right:
-        return Position(x: boardHeight - origin.x - 1, y: boardWidth - 1 - origin.y);
+        return Position(
+            x: boardHeight - origin.x - 1, y: boardWidth - 1 - origin.y);
       default:
         return origin;
     }
@@ -171,7 +174,8 @@ class Game extends ChangeNotifier {
     }
 
     isBlocked(Position position) {
-      return blockedCells.any((element) => element.x == position.x && element.y == position.y);
+      return blockedCells
+          .any((element) => element.x == position.x && element.y == position.y);
     }
 
     walkToBoard((i, j) {

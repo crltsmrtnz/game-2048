@@ -1,6 +1,6 @@
 {
-    "name": "flutter2048",
-    "short_name": "flutter2048",
+    "name": "Game2048",
+    "short_name": "Game2048",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

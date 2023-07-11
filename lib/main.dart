@@ -1,6 +1,5 @@
+import 'package:game2048/pages/game_page.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter2048/pages/game_page.dart';
-import 'package:flutter2048/pages/testing_page.dart';
 
 void main() {
   runApp(const MyApp());

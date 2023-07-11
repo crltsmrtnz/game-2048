@@ -1,9 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter2048/components/game_board.dart';
-import 'package:flutter2048/components/game_move_buttons.dart';
-import 'package:flutter2048/types/directions.dart';
+import 'package:game2048/types/directions.dart';
 
 class ArrowDetect extends StatefulWidget {
   const ArrowDetect({
@@ -29,7 +27,8 @@ class ArrowDetect extends StatefulWidget {
       return;
     }
 
-    Directions direction = keyDirection.entries.firstWhere((element) => element.key == key).value;
+    Directions direction =
+        keyDirection.entries.firstWhere((element) => element.key == key).value;
     switch (direction) {
       case Directions.up:
         onArrowUp();

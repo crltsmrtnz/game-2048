@@ -1,4 +1,4 @@
-import 'package:flutter2048/types/position.dart';
+import 'package:game2048/types/position.dart';
 
 class BrickMove {
   final Position origin;

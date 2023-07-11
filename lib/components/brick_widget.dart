@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter2048/components/game_board.dart';
-import 'package:flutter2048/helpers/board_mixin.dart';
+import 'package:game2048/components/game_board.dart';
+import 'package:game2048/helpers/board_mixin.dart';
 
 class BrickWidget extends StatelessWidget {
   final int boardWidth;
